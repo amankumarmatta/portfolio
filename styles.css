@@ -509,8 +509,8 @@ footer {
 }
 
 .experience {
-    padding: 4rem 2rem;
-    background: var(--bg-secondary);
+    padding: 6rem 2rem;
+    background-color: var(--bg-color);
 }
 
 .experience h2 {
@@ -533,8 +533,9 @@ footer {
 
 .timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 2rem 0;
 }
 
 .timeline::before {
@@ -545,26 +546,30 @@ footer {
     transform: translateX(-50%);
     width: 2px;
     height: 100%;
-    background: var(--accent-color);
+    background: linear-gradient(135deg, var(--accent-color), var(--highlight-color));
 }
 
 .timeline-item {
     margin-bottom: 3rem;
     position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.timeline-item:nth-child(even) {
+    justify-content: flex-end;
 }
 
 .timeline-content {
-    background: var(--bg-primary);
+    background-color: var(--card-bg);
     padding: 2rem;
-    border-radius: 8px;
+    border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+    width: calc(45% - 30px);
+    margin: 0;
 }
 
 .timeline-content::before {
@@ -573,7 +578,7 @@ footer {
     top: 20px;
     width: 20px;
     height: 20px;
-    background: var(--accent-color);
+    background: linear-gradient(135deg, var(--accent-color), var(--highlight-color));
     border-radius: 50%;
 }
 
@@ -583,6 +588,11 @@ footer {
 
 .timeline-item:nth-child(even) .timeline-content::before {
     left: -60px;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .timeline-content h3 {
@@ -623,17 +633,24 @@ footer {
     color: var(--accent-color);
 }
 
+/* Responsive Design for Timeline */
 @media (max-width: 768px) {
     .timeline::before {
         left: 30px;
     }
 
+    .timeline-item {
+        justify-content: flex-start !important;
+    }
+
     .timeline-content {
-        margin-left: 60px;
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
     }
 
     .timeline-content::before {
         left: -60px !important;
+        right: auto !important;
     }
 }
 
