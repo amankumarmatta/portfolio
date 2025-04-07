@@ -69,4 +69,191 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.boxShadow = 'none';
         });
     });
+});
+
+// Page content templates
+const pages = {
+    home: `
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Aman Kumar Matta</h1>
+                <h2>Unity Developer</h2>
+                <p class="tagline">Creating immersive experiences through innovative game development</p>
+            </div>
+        </section>
+    `,
+    about: `
+        <section class="about">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>I am a passionate Unity Developer with expertise in creating immersive gaming experiences. With a strong foundation in game development and a keen eye for detail, I specialize in building engaging and interactive games.</p>
+                        <p>My journey in game development started with a deep fascination for creating virtual worlds and has evolved into a professional career focused on delivering high-quality gaming experiences.</p>
+                        <div class="skills">
+                            <h3>Technical Skills</h3>
+                            <div class="skills-grid">
+                                <div class="skill-category">
+                                    <h4>Game Development</h4>
+                                    <ul>
+                                        <li>Unity Engine</li>
+                                        <li>C# Programming</li>
+                                        <li>Game Design</li>
+                                        <li>3D Modeling</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-category">
+                                    <h4>Programming</h4>
+                                    <ul>
+                                        <li>C#</li>
+                                        <li>JavaScript</li>
+                                        <li>Python</li>
+                                        <li>Git</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `,
+    experience: `
+        <section class="experience">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Unity 3D Developer</h3>
+                        <h4>Brahman Studios</h4>
+                        <p class="timeline-date">10/2024 - 03/2025</p>
+                        <ul class="timeline-details">
+                            <li>Gained hands-on experience in 3D space management within Unity for a cross-platform MMORPG</li>
+                            <li>Implemented multi input support, enhancing gameplay accessibility across multiple platforms</li>
+                            <li>Contributed to networking solutions, ensuring smooth cross-platform connectivity</li>
+                            <li>Responsible for debugging, troubleshooting, and maintaining an existing codebase to improve game performance and user experience</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Game Developer</h3>
+                        <h4>Digiquest India</h4>
+                        <p class="timeline-date">05/2023 - 09/2024</p>
+                        <ul class="timeline-details">
+                            <li>Developed multiple 2D games, gaining hands-on experience with the entire game development lifecycle</li>
+                            <li>Gained expertise in creating efficient game mechanics and integrating user interfaces for 2D gameplay</li>
+                            <li>Collaborated with a team to ensure smooth deployment and troubleshooting of games across various platforms</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Game Programmer Intern</h3>
+                        <h4>Gameshastra Solutions</h4>
+                        <p class="timeline-date">08/2022 - 01/2023</p>
+                        <ul class="timeline-details">
+                            <li>Acquired proficiency in writing optimized code, focusing on performance and scalability in multiplayer environments</li>
+                            <li>Utilized scriptable objects to streamline game logic and enhance code maintainability in Unity projects</li>
+                            <li>Applied Photon Unity Networking (PUN 2) to develop and implement effective multiplayer functionality for the board game 'Daadi', ensuring smooth real-time interactions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `,
+    work: `
+        <section class="work">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project1.jpg" alt="Project 1">
+                    </div>
+                    <h3>VR Adventure Game</h3>
+                    <p>An immersive VR experience with innovative gameplay mechanics and stunning visuals.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project2.jpg" alt="Project 2">
+                    </div>
+                    <h3>Mobile Puzzle Game</h3>
+                    <p>A challenging puzzle game with unique mechanics and engaging gameplay.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="project3.jpg" alt="Project 3">
+                    </div>
+                    <h3>3D Platformer</h3>
+                    <p>A 3D platformer game with advanced physics and character mechanics.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `,
+    contact: `
+        <section class="contact">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Itch.io</a>
+                </div>
+            </div>
+        </section>
+    `
+};
+
+// Function to load page content
+function loadPage(pageId) {
+    const content = document.getElementById('content');
+    content.innerHTML = pages[pageId];
+    
+    // Update active navigation link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${pageId}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Handle navigation
+document.addEventListener('DOMContentLoaded', () => {
+    // Load home page by default
+    loadPage('home');
+    
+    // Handle navigation clicks
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const pageId = link.getAttribute('href').substring(1);
+            loadPage(pageId);
+            window.scrollTo(0, 0);
+        });
+    });
+    
+    // Handle browser back/forward
+    window.addEventListener('popstate', () => {
+        const pageId = window.location.hash.substring(1) || 'home';
+        loadPage(pageId);
+    });
 }); 
