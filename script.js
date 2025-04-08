@@ -166,39 +166,7 @@ const pages = {
         <section class="work">
             <h2>My Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="project1.jpg" alt="Project 1">
-                    </div>
-                    <h3>VR Adventure Game</h3>
-                    <p>An immersive VR experience with innovative gameplay mechanics and stunning visuals.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">View Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="project2.jpg" alt="Project 2">
-                    </div>
-                    <h3>Mobile Puzzle Game</h3>
-                    <p>A challenging puzzle game with unique mechanics and engaging gameplay.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">View Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="project3.jpg" alt="Project 3">
-                    </div>
-                    <h3>3D Platformer</h3>
-                    <p>A 3D platformer game with advanced physics and character mechanics.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">View Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
-                </div>
+                <!-- Projects will be loaded here -->
             </div>
         </section>
     `,
@@ -222,17 +190,75 @@ const pages = {
     `
 };
 
-// Function to load page content
-function loadPage(pageId) {
-    const content = document.getElementById('content');
-    content.innerHTML = pages[pageId];
+// Projects data
+const projects = [
+    {
+        name: "Obstacle-Course",
+        title: "Obstacle Course",
+        description: "A challenging 3D obstacle course game built with Unity, featuring various obstacles and time trials.",
+        image: "https://raw.githubusercontent.com/amankumarmatta/Obstacle-Course/main/preview.png",
+        githubUrl: "https://github.com/amankumarmatta/Obstacle-Course",
+        playUrl: "https://amankumarmatta.github.io/Obstacle-Course"
+    },
+    {
+        name: "Flappy-Bird",
+        title: "Flappy Bird",
+        description: "A Unity implementation of the classic Flappy Bird game with custom features and mechanics.",
+        image: "https://raw.githubusercontent.com/amankumarmatta/Flappy-Bird/main/preview.png",
+        githubUrl: "https://github.com/amankumarmatta/Flappy-Bird",
+        playUrl: "https://amankumarmatta.github.io/Flappy-Bird"
+    },
+    {
+        name: "Daadi",
+        title: "Daadi",
+        description: "A multiplayer board game implementation using Unity and Photon Networking, featuring real-time gameplay.",
+        image: "https://raw.githubusercontent.com/amankumarmatta/Daadi/main/preview.png",
+        githubUrl: "https://github.com/amankumarmatta/Daadi",
+        playUrl: "https://amankumarmatta.github.io/Daadi"
+    },
+    {
+        name: "Hero-Hurdles",
+        title: "Hero Hurdles",
+        description: "An action-packed 2D platformer game where players navigate through various hurdles and challenges.",
+        image: "https://raw.githubusercontent.com/amankumarmatta/Hero-Hurdles/main/preview.png",
+        githubUrl: "https://github.com/amankumarmatta/Hero-Hurdles",
+        playUrl: "https://amankumarmatta.github.io/Hero-Hurdles"
+    }
+];
+
+// Function to create project card HTML
+function createProjectCard(project) {
+    return `
+        <div class="project-card" data-project="${project.name}">
+            <div class="project-image">
+                <img src="${project.image}" alt="${project.title}" onerror="this.src='https://via.placeholder.com/400x300?text=No+Preview+Available'">
+            </div>
+            <div class="project-info">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <div class="project-links">
+                    <a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-button github">
+                        <i class="fab fa-github button-icon"></i>
+                        <span class="button-text">GitHub</span>
+                    </a>
+                    <a href="${project.playUrl}" target="_blank" rel="noopener noreferrer" class="project-button play">
+                        <i class="fas fa-gamepad button-icon"></i>
+                        <span class="button-text">Play Game</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// Function to display projects
+function displayProjects() {
+    const container = document.querySelector('.projects-grid');
+    if (!container) return;
     
-    // Update active navigation link
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${pageId}`) {
-            link.classList.add('active');
-        }
+    container.innerHTML = ''; // Clear existing content
+    projects.forEach(project => {
+        container.innerHTML += createProjectCard(project);
     });
 }
 
@@ -256,4 +282,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const pageId = window.location.hash.substring(1) || 'home';
         loadPage(pageId);
     });
-}); 
+});
+
+// Update the loadPage function to handle projects
+function loadPage(pageId) {
+    const content = document.getElementById('content');
+    content.innerHTML = pages[pageId];
+    
+    // If loading the work page, display projects
+    if (pageId === 'work') {
+        displayProjects();
+    }
+    
+    // Update active navigation link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${pageId}`) {
+            link.classList.add('active');
+        }
+    });
+} 
