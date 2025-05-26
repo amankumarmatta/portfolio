@@ -99,14 +99,12 @@ const pages = {
                                         <li>Unity Engine</li>
                                         <li>C# Programming</li>
                                         <li>Game Design</li>
-                                        <li>3D Modeling</li>
                                     </ul>
                                 </div>
                                 <div class="skill-category">
                                     <h4>Programming</h4>
                                     <ul>
                                         <li>C#</li>
-                                        <li>JavaScript</li>
                                         <li>Python</li>
                                         <li>Git</li>
                                     </ul>
@@ -137,9 +135,21 @@ const pages = {
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
+                        <h3>Unity XR Developer</h3>
+                        <h4>Kaala Labs</h4>
+                        <p class="timeline-date">01/2024- 09/2024</p>
+                        <ul class="timeline-details">
+                            <li>Developed and optimized immersive VR experiences for Meta Quest 2 and Quest 3 using Unity XR Toolkit and OpenXR, ensuring smooth performance and intuitive interaction design.</li>
+                            <li>Implemented AR features leveraging Unity's AR Foundation for cross-platform deployment, delivering engaging experiences on supported mobile and headset devices.</li>
+                            <li>Collaborated with cross-functional teams to design, prototype, and deploy XR applications, with a focus on usability, spatial interactions, and device-specific performance optimization.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
                         <h3>Game Developer</h3>
                         <h4>Digiquest India</h4>
-                        <p class="timeline-date">05/2023 - 09/2024</p>
+                        <p class="timeline-date">05/2023 - 12/2023</p>
                         <ul class="timeline-details">
                             <li>Developed multiple 2D games, gaining hands-on experience with the entire game development lifecycle</li>
                             <li>Gained expertise in creating efficient game mechanics and integrating user interfaces for 2D gameplay</li>
