@@ -147,18 +147,6 @@ const pages = {
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Game Developer</h3>
-                        <h4>Digiquest India</h4>
-                        <p class="timeline-date">05/2023 - 12/2023</p>
-                        <ul class="timeline-details">
-                            <li>Developed multiple 2D games, gaining hands-on experience with the entire game development lifecycle</li>
-                            <li>Gained expertise in creating efficient game mechanics and integrating user interfaces for 2D gameplay</li>
-                            <li>Collaborated with a team to ensure smooth deployment and troubleshooting of games across various platforms</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
                         <h3>Game Programmer Intern</h3>
                         <h4>Gameshastra Solutions</h4>
                         <p class="timeline-date">08/2022 - 01/2023</p>
