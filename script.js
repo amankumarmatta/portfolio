@@ -195,7 +195,7 @@ const projects = [
     {
         name: "Obstacle-Course",
         title: "Obstacle Course",
-        description: "A challenging 3D obstacle course game built with Unity, featuring various obstacles and time trials.",
+        description: "A Unity-based obstacle course game with various challenging levels and mechanics.",
         image: "https://raw.githubusercontent.com/amankumarmatta/Obstacle-Course/main/preview.png",
         githubUrl: "https://github.com/amankumarmatta/Obstacle-Course",
         playUrl: "https://amankumarmatta.github.io/Obstacle-Course"
@@ -203,7 +203,7 @@ const projects = [
     {
         name: "Flappy-Bird",
         title: "Flappy Bird",
-        description: "A Unity implementation of the classic Flappy Bird game with custom features and mechanics.",
+        description: "A simple Flappy Bird clone built using the Unity game engine. Features smooth gameplay, scoring system, and basic obstacle generation.",
         image: "https://raw.githubusercontent.com/amankumarmatta/Flappy-Bird/main/preview.png",
         githubUrl: "https://github.com/amankumarmatta/Flappy-Bird",
         playUrl: "https://amankumarmatta.github.io/Flappy-Bird"
@@ -211,7 +211,7 @@ const projects = [
     {
         name: "Daadi",
         title: "Daadi",
-        description: "A multiplayer board game implementation using Unity and Photon Networking, featuring real-time gameplay.",
+        description: "Daadi is a 2D traditional board game implemented in Unity with Photon PUN2 for real-time multiplayer. It's a 2-player, turn-based strategy game that brings classic gameplay to modern platforms.",
         image: "https://raw.githubusercontent.com/amankumarmatta/Daadi/main/preview.png",
         githubUrl: "https://github.com/amankumarmatta/Daadi",
         playUrl: "https://amankumarmatta.github.io/Daadi"
@@ -219,10 +219,18 @@ const projects = [
     {
         name: "Hero-Hurdles",
         title: "Hero Hurdles",
-        description: "An action-packed 2D platformer game where players navigate through various hurdles and challenges.",
+        description: "Hero Hurdles is a 2D platformer game made in Unity. Navigate challenging levels, jump over obstacles, and avoid traps as you guide the hero to victory.",
         image: "https://raw.githubusercontent.com/amankumarmatta/Hero-Hurdles/main/preview.png",
         githubUrl: "https://github.com/amankumarmatta/Hero-Hurdles",
         playUrl: "https://amankumarmatta.github.io/Hero-Hurdles"
+    },
+    {
+        name: "Traffic-Escape",
+        title: "Traffic Escape",
+        description: "Traffic Escape is a 2D tap-based puzzle game made in Unity. Tap cars based on their direction arrows to guide them and clear the traffic jam. A fun and challenging test of timing, focus, and quick decision-making.",
+        image: "https://raw.githubusercontent.com/amankumarmatta/Traffic-Escape/main/preview.png",
+        githubUrl: "https://github.com/amankumarmatta/Traffic-Escape",
+        playUrl: "https://amankumarmatta.github.io/Traffic-Escape"
     }
 ];
 
