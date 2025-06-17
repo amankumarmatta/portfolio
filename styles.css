@@ -1,13 +1,13 @@
 :root {
-    --bg-color: #0F0F0F;
-    --text-primary: #F5F5F5;
-    --text-secondary: #A0A0A0;
-    --accent-color: #5C6AC4;
-    --highlight-color: #FF6B6B;
-    --card-bg: #1A1A1A;
-    --border-color: #2A2A2A;
-    --gradient-start: #5C6AC4;
-    --gradient-end: #FF6B6B;
+    --bg-color: #2b3339;           /* Background */
+    --text-primary: #d3c6aa;       /* Main foreground */
+    --text-secondary: #a7c080;     /* Secondary text (subtle green) */
+    --accent-color: #7fbbb3;       /* Cyan accent */
+    --highlight-color: #e67e80;    /* Red/pink highlight */
+    --card-bg: #3c4841;            /* Slightly lighter panel */
+    --border-color: #5c6a72;       /* Muted border */
+    --gradient-start: #7fbbb3;     /* Accent cyan */
+    --gradient-end: #d699b6;       /* Lavender pink */
 }
 
 * {
