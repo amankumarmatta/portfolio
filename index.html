@@ -1,86 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unity Developer Portfolio</title>
+    <title>Aman Kumar Matta - Unity Developer</title>
     <link rel="icon" type="image/png" sizes="128x128" href="images/favicon.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="nav-content">
-            <div class="logo">UnityDev</div>
-            <div class="nav-links">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#work" class="nav-link">Work</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="docs/Game Dev.pdf" download class="resume-button">Resume</a>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">AKM</span>
+                <div class="logo-dot"></div>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-section="home">
+                        <span class="nav-text">Home</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-section="about">
+                        <span class="nav-text">About</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link" data-section="experience">
+                        <span class="nav-text">Experience</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-section="projects">
+                        <span class="nav-text">Projects</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <span class="nav-text">Contact</span>
+                        <div class="nav-indicator"></div>
+                    </a>
+                </li>
+            </ul>
+            <div class="resume-btn-container">
+                <a href="docs/Game Dev.pdf" download class="resume-btn">
+                    <i class="fas fa-download"></i>
+                    <span>Resume</span>
+                </a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
 
-    <main id="content">
-        <section id="experience" class="section">
-            <div class="section-content">
-                <h2 class="section-title">Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Unity 3D Developer</h3>
-                            <h4>Brahman Studios</h4>
-                            <p class="timeline-date">10/2024 - 03/2025</p>
-                            <ul class="timeline-details">
-                                <li>Gained hands-on experience in 3D space management within Unity for a cross-platform MMORPG</li>
-                                <li>Implemented multi input support, enhancing gameplay accessibility across multiple platforms</li>
-                                <li>Contributed to networking solutions, ensuring smooth cross-platform connectivity</li>
-                                <li>Responsible for debugging, troubleshooting, and maintaining an existing codebase</li>
-                            </ul>
-                        </div>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-greeting">
+                        <span class="greeting-text">Hello, I'm</span>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Game Developer</h3>
-                            <h4>Digiquest India</h4>
-                            <p class="timeline-date">05/2023 - 09/2024</p>
-                            <ul class="timeline-details">
-                                <li>Developed multiple 2D games, gaining hands-on experience with the entire game development lifecycle</li>
-                                <li>Gained expertise in creating efficient game mechanics and integrating user interfaces</li>
-                                <li>Collaborated with a team to ensure smooth deployment and troubleshooting of games</li>
-                            </ul>
-                        </div>
+                    <h1 class="hero-name">
+                        <span class="name-line">Aman Kumar</span>
+                        <span class="name-line">Matta</span>
+                    </h1>
+                    <div class="hero-title">
+                        <span class="title-text">Unity Developer</span>
+                        <div class="title-cursor"></div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Game Programmer Intern</h3>
-                            <h4>Gameshastra Solutions</h4>
-                            <p class="timeline-date">08/2022 - 01/2023</p>
-                            <ul class="timeline-details">
-                                <li>Acquired proficiency in writing optimized code, focusing on performance and scalability in multiplayer environments</li>
-                                <li>Utilized scriptable objects to streamline game logic and enhance code maintainability in Unity projects</li>
-                                <li>Applied Photon Unity Networking (PUN 2) to develop and implement effective multiplayer functionality for the board game 'Daadi', ensuring smooth real-time interactions</li>
-                            </ul>
+                    <p class="hero-description">
+                        I create immersive gaming experiences through innovative game development,
+                        specializing in Unity engine and cross-platform solutions.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="cta-primary" data-section="projects">
+                            <span>View My Work</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="cta-secondary" data-section="contact">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://github.com/amankumarmatta" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/amankumarmatta" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://itch.io/profile/amankumarmatta" target="_blank" class="social-link">
+                            <i class="fab fa-itch-io"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-container">
+                        <div class="code-window">
+                            <div class="window-header">
+                                <div class="window-controls">
+                                    <div class="control red"></div>
+                                    <div class="control yellow"></div>
+                                    <div class="control green"></div>
+                                </div>
+                                <div class="window-title">GameManager.cs</div>
+                            </div>
+                            <div class="code-content">
+                                <div class="code-line"><span class="keyword">public class</span> <span
+                                        class="class">GameManager</span> : <span class="class">MonoBehaviour</span>
+                                </div>
+                                <div class="code-line">{</div>
+                                <div class="code-line"> <span class="keyword">void</span> <span
+                                        class="method">Start</span>()</div>
+                                <div class="code-line"> {</div>
+                                <div class="code-line"> <span class="comment">// Initialize game systems</span></div>
+                                <div class="code-line"> <span class="method">InitializePlayer</span>();</div>
+                                <div class="code-line"> <span class="method">LoadGameData</span>();</div>
+                                <div class="code-line"> }</div>
+                                <div class="code-line">}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+                <span class="scroll-text">Scroll to explore</span>
             </div>
         </section>
 
-        <section id="work" class="section">
-            <div class="section-content">
-                <h2 class="section-title">Work</h2>
-                <div class="projects-grid" id="projects-container">
-                    <!-- Projects will be loaded dynamically -->
+        <!-- Content Sections Container -->
+        <div class="sections-container">
+            <!-- About Section -->
+            <section id="about" class="section about-section">
+                <div class="section-container">
+                    <div class="section-header">
+                        <span class="section-number">01</span>
+                        <h2 class="section-title">About Me</h2>
+                        <div class="section-line"></div>
+                    </div>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p class="about-intro">
+                                I am a passionate Unity Developer with expertise in creating immersive gaming
+                                experiences.
+                                With a strong foundation in game development and a keen eye for detail, I specialize in
+                                building engaging and interactive games.
+                            </p>
+                            <p class="about-description">
+                                My journey in game development started with a deep fascination for creating virtual
+                                worlds
+                                and has evolved into a professional career focused on delivering high-quality gaming
+                                experiences
+                                across multiple platforms.
+                            </p>
+                            <div class="skills-container">
+                                <h3 class="skills-title">Technical Expertise</h3>
+                                <div class="skills-grid">
+                                    <div class="skill-category">
+                                        <h4>Game Development</h4>
+                                        <div class="skills-list">
+                                            <span class="skill-tag">Unity Engine</span>
+                                            <span class="skill-tag">C# Programming</span>
+                                            <span class="skill-tag">Game Design</span>
+                                            <span class="skill-tag">XR Development</span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-category">
+                                        <h4>Programming & Tools</h4>
+                                        <div class="skills-list">
+                                            <span class="skill-tag">C#</span>
+                                            <span class="skill-tag">Python</span>
+                                            <span class="skill-tag">Git</span>
+                                            <span class="skill-tag">Photon PUN2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label">Projects Completed</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">2+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">3</div>
+                                <div class="stat-label">Companies Worked</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="section experience-section">
+                <div class="section-container">
+                    <div class="section-header">
+                        <span class="section-number">02</span>
+                        <h2 class="section-title">Experience</h2>
+                        <div class="section-line"></div>
+                    </div>
+                    <div class="timeline-container">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h3>Unity 3D Developer</h3>
+                                        <span class="company">Brahman Studios</span>
+                                        <span class="duration">Oct 2024 - Mar 2025</span>
+                                    </div>
+                                    <ul class="timeline-details">
+                                        <li>Gained hands-on experience in 3D space management within Unity for a
+                                            cross-platform MMORPG</li>
+                                        <li>Implemented multi input support, enhancing gameplay accessibility across
+                                            multiple platforms</li>
+                                        <li>Contributed to networking solutions, ensuring smooth cross-platform
+                                            connectivity</li>
+                                        <li>Responsible for debugging, troubleshooting, and maintaining an existing
+                                            codebase</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h3>Unity XR Developer</h3>
+                                        <span class="company">Kaala Labs</span>
+                                        <span class="duration">Jan 2024 - Sep 2024</span>
+                                    </div>
+                                    <ul class="timeline-details">
+                                        <li>Developed and optimized immersive VR experiences for Meta Quest 2 and Quest
+                                            3</li>
+                                        <li>Implemented AR features leveraging Unity's AR Foundation for cross-platform
+                                            deployment</li>
+                                        <li>Collaborated with cross-functional teams to design, prototype, and deploy XR
+                                            applications</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-header">
+                                        <h3>Game Programmer Intern</h3>
+                                        <span class="company">Gameshastra Solutions</span>
+                                        <span class="duration">Aug 2022 - Jan 2023</span>
+                                    </div>
+                                    <ul class="timeline-details">
+                                        <li>Acquired proficiency in writing optimized code, focusing on performance and
+                                            scalability</li>
+                                        <li>Utilized scriptable objects to streamline game logic and enhance code
+                                            maintainability</li>
+                                        <li>Applied Photon Unity Networking (PUN 2) to develop multiplayer functionality
+                                            for 'Daadi'</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section projects-section">
+                <div class="section-container">
+                    <div class="section-header">
+                        <span class="section-number">03</span>
+                        <h2 class="section-title">Featured Projects</h2>
+                        <div class="section-line"></div>
+                    </div>
+                    <div class="projects-grid" id="projects-container">
+                        <!-- Projects will be loaded dynamically -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section contact-section">
+                <div class="section-container">
+                    <div class="section-header">
+                        <span class="section-number">04</span>
+                        <h2 class="section-title">Get In Touch</h2>
+                        <div class="section-line"></div>
+                    </div>
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <h3>Let's create something amazing together</h3>
+                            <p>I'm always interested in new opportunities and exciting projects. Whether you have a
+                                question or just want to say hi, feel free to reach out!</p>
+                            <div class="contact-methods">
+                                <div class="contact-method">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>amankumarmatta@email.com</span>
+                                </div>
+                                <div class="contact-method">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>India</span>
+                                </div>
+                            </div>
+                            <div class="social-links">
+                                <a href="https://github.com/amankumarmatta" target="_blank" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://linkedin.com/in/amankumarmatta" target="_blank" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://itch.io/profile/amankumarmatta" target="_blank" class="social-link">
+                                    <i class="fab fa-itch-io"></i>
+                                    <span>Itch.io</span>
+                                </a>
+                            </div>
+                        </div>
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required>
+                                <label for="name">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">Your Email</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <label for="message">Your Message</label>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Aman Kumar Matta. Crafted with passion and code.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
-</html> 
+
+</html>
