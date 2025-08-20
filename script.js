@@ -18,14 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Get form data
             const formData = new FormData(contactForm);
             const data = Object.fromEntries(formData);
-            
+
             // Here you would typically send the data to a server
             console.log('Form submitted:', data);
-            
+
             // Show success message
             alert('Thank you for your message! I will get back to you soon.');
             contactForm.reset();
@@ -38,12 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
-        
+
         if (currentScroll <= 0) {
             navbar.classList.remove('scroll-up');
             return;
         }
-        
+
         if (currentScroll > lastScroll && !navbar.classList.contains('scroll-down')) {
             // Scroll down
             navbar.classList.remove('scroll-up');
@@ -120,6 +120,13 @@ const pages = {
         <section class="experience">
             <h2>Professional Experience</h2>
             <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Unity XR Developer</h3>
+                        <h4>AllReal (Machenn)</h4>
+                        <p class="timeline-date">04/2025 - Present</p>
+                    </div>
+                </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <h3>Unity 3D Developer</h3>
@@ -264,7 +271,7 @@ function createProjectCard(project) {
 function displayProjects() {
     const container = document.querySelector('.projects-grid');
     if (!container) return;
-    
+
     container.innerHTML = ''; // Clear existing content
     projects.forEach(project => {
         container.innerHTML += createProjectCard(project);
@@ -275,7 +282,7 @@ function displayProjects() {
 document.addEventListener('DOMContentLoaded', () => {
     // Load home page by default
     loadPage('home');
-    
+
     // Handle navigation clicks
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', (e) => {
@@ -285,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo(0, 0);
         });
     });
-    
+
     // Handle browser back/forward
     window.addEventListener('popstate', () => {
         const pageId = window.location.hash.substring(1) || 'home';
@@ -297,12 +304,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function loadPage(pageId) {
     const content = document.getElementById('content');
     content.innerHTML = pages[pageId];
-    
+
     // If loading the work page, display projects
     if (pageId === 'work') {
         displayProjects();
     }
-    
+
     // Update active navigation link
     document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
@@ -310,4 +317,4 @@ function loadPage(pageId) {
             link.classList.add('active');
         }
     });
-} 
+}
