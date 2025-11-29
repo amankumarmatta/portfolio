@@ -13,12 +13,13 @@
 <body>
     <nav class="navbar">
         <div class="nav-content">
-            <div class="logo">UnityDev</div>
-            <div class="nav-links">
+            <div class="logo">zen0x</div>
+            <div class="nav-links" id="nav-links">
                 <a href="#home" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
                 <a href="#experience" class="nav-link">Experience</a>
-                <a href="#work" class="nav-link">Work</a>
+                <a href="#work" class="nav-link">Projects</a>
                 <a href="#contact" class="nav-link">Contact</a>
                 <a href="docs/Game Dev.pdf" download class="resume-button">Resume</a>
             </div>
@@ -26,61 +27,219 @@
     </nav>
 
     <main id="content">
-        <section id="experience" class="section">
+        <!-- Home/Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Aman Kumar Matta</h1>
+                <h2>Unity Developer</h2>
+                <p class="tagline">Creating immersive gaming experiences through innovative game development</p>
+                <a href="#work" class="cta-button">View My Work</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
             <div class="section-content">
-                <h2 class="section-title">Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Unity 3D Developer</h3>
-                            <h4>Brahman Studios</h4>
-                            <p class="timeline-date">10/2024 - 03/2025</p>
-                            <ul class="timeline-details">
-                                <li>Gained hands-on experience in 3D space management within Unity for a cross-platform MMORPG</li>
-                                <li>Implemented multi input support, enhancing gameplay accessibility across multiple platforms</li>
-                                <li>Contributed to networking solutions, ensuring smooth cross-platform connectivity</li>
-                                <li>Responsible for debugging, troubleshooting, and maintaining an existing codebase</li>
-                            </ul>
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="card-accent"></div>
+                        <div class="about-content">
+                            <h3>Who I Am</h3>
+                            <p>I'm a passionate Unity Developer with expertise in creating immersive gaming experiences. With a strong foundation in game development and a keen eye for detail, I specialize in building engaging and interactive games that captivate players.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Game Developer</h3>
-                            <h4>Digiquest India</h4>
-                            <p class="timeline-date">05/2023 - 09/2024</p>
-                            <ul class="timeline-details">
-                                <li>Developed multiple 2D games, gaining hands-on experience with the entire game development lifecycle</li>
-                                <li>Gained expertise in creating efficient game mechanics and integrating user interfaces</li>
-                                <li>Collaborated with a team to ensure smooth deployment and troubleshooting of games</li>
-                            </ul>
+                    <div class="about-card">
+                        <div class="card-accent"></div>
+                        <div class="about-content">
+                            <h3>My Journey</h3>
+                            <p>My passion for creating virtual worlds sparked a professional career focused on delivering high-quality gaming experiences. From XR development to multiplayer systems, I've worked across diverse platforms and technologies to bring innovative game concepts to life.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Game Programmer Intern</h3>
-                            <h4>Gameshastra Solutions</h4>
-                            <p class="timeline-date">08/2022 - 01/2023</p>
-                            <ul class="timeline-details">
-                                <li>Acquired proficiency in writing optimized code, focusing on performance and scalability in multiplayer environments</li>
-                                <li>Utilized scriptable objects to streamline game logic and enhance code maintainability in Unity projects</li>
-                                <li>Applied Photon Unity Networking (PUN 2) to develop and implement effective multiplayer functionality for the board game 'Daadi', ensuring smooth real-time interactions</li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-number">2+</span>
+                        <span class="highlight-label">Years Experience</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">5+</span>
+                        <span class="highlight-label">Projects Built</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-number">3</span>
+                        <span class="highlight-label">XR Platforms</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="work" class="section">
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
             <div class="section-content">
-                <h2 class="section-title">Work</h2>
-                <div class="projects-grid" id="projects-container">
-                    <!-- Projects will be loaded dynamically -->
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Game Development</h4>
+                        <ul>
+                            <li>Unity Engine</li>
+                            <li>C# Programming</li>
+                            <li>Game Design</li>
+                            <li>Physics & Collision</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Extended Reality</h4>
+                        <ul>
+                            <li>VR Development</li>
+                            <li>AR Development</li>
+                            <li>Meta Quest 2/3</li>
+                            <li>OpenXR</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Programming</h4>
+                        <ul>
+                            <li>C#</li>
+                            <li>Python</li>
+                            <li>Git & Version Control</li>
+                            <li>Networking</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Technologies</h4>
+                        <ul>
+                            <li>Photon PUN 2</li>
+                            <li>Visual Studio</li>
+                            <li>Blender</li>
+                            <li>VS Code</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience section">
+            <div class="section-content">
+                <h2 class="section-title">Experience</h2>
+                <div class="experience-carousel-wrapper">
+                    <button class="carousel-button exp-prev" id="exp-prev-btn" aria-label="Previous experience">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="25 10 15 20 25 30"></polyline>
+                        </svg>
+                    </button>
+                    <div class="experience-carousel">
+                        <div class="experience-card">
+                            <div class="card-year">04/2025</div>
+                            <div class="card-content">
+                                <h3>Unity XR Developer</h3>
+                                <p class="company">AllReal (Machenn)</p>
+                                <ul class="description-list">
+                                    <li>Developing immersive XR experiences for enterprise and consumer applications</li>
+                                    <li>Optimizing performance for cross-platform XR deployment</li>
+                                </ul>
+                                <div class="card-status">Current</div>
+                            </div>
+                        </div>
+                        <div class="experience-card">
+                            <div class="card-year">10/2024</div>
+                            <div class="card-content">
+                                <h3>Unity 3D Developer</h3>
+                                <p class="company">Brahman Studios</p>
+                                <ul class="description-list">
+                                    <li>Gained hands-on experience in 3D space management within Unity for a cross-platform MMORPG</li>
+                                    <li>Implemented multi input support, enhancing gameplay accessibility across multiple platforms</li>
+                                    <li>Contributed to networking solutions, ensuring smooth cross-platform connectivity</li>
+                                    <li>Responsible for debugging, troubleshooting, and maintaining an existing codebase</li>
+                                </ul>
+                                <div class="duration">6 months</div>
+                            </div>
+                        </div>
+                        <div class="experience-card">
+                            <div class="card-year">01/2024</div>
+                            <div class="card-content">
+                                <h3>Unity XR Developer</h3>
+                                <p class="company">Kaala Labs</p>
+                                <ul class="description-list">
+                                    <li>Developed and optimized immersive VR experiences for Meta Quest 2 and Quest 3</li>
+                                    <li>Implemented AR features leveraging Unity's AR Foundation for cross-platform deployment</li>
+                                    <li>Collaborated with cross-functional teams to design and deploy XR applications</li>
+                                </ul>
+                                <div class="duration">9 months</div>
+                            </div>
+                        </div>
+                        <div class="experience-card">
+                            <div class="card-year">08/2022</div>
+                            <div class="card-content">
+                                <h3>Game Programmer Intern</h3>
+                                <p class="company">Gameshastra Solutions</p>
+                                <ul class="description-list">
+                                    <li>Acquired proficiency in writing optimized code, focusing on performance and scalability</li>
+                                    <li>Utilized scriptable objects to streamline game logic and enhance code maintainability</li>
+                                    <li>Applied Photon Unity Networking (PUN 2) to develop multiplayer functionality</li>
+                                </ul>
+                                <div class="duration">6 months</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-button exp-next" id="exp-next-btn" aria-label="Next experience">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 10 25 20 15 30"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="work" class="work section">
+            <div class="section-content">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="carousel-container">
+                    <button class="carousel-button carousel-prev" id="prev-btn" aria-label="Previous project">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="25 6 13 18 25 30"></polyline>
+                        </svg>
+                    </button>
+                    <div class="projects-grid" id="projects-container">
+                        <!-- Projects will be loaded dynamically -->
+                    </div>
+                    <button class="carousel-button carousel-next" id="next-btn" aria-label="Next project">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 6 27 18 15 30"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="section-content">
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="contact-content">
+                    <form class="contact-form">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Message" required></textarea>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                    <div class="social-links">
+                        <h4>Connect With Me</h4>
+                        <a href="https://github.com/amankumarmatta" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+                        <a href="https://linkedin.com/in/amankumarmatta" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+                        <a href="https://itch.io/profile/amankumarmatta" target="_blank" rel="noopener noreferrer" class="social-link">Itch.io</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <footer>
+        <p>&copy; 2025 Aman Kumar Matta. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
